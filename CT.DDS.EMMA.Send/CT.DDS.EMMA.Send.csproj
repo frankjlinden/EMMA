@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CT.DDS.Configuration" Version="1.0.1" />
+    <PackageReference Include="EDennis.AspNetCore.Base" Version="2.3.0" />
+    <PackageReference Include="EDennis.NetCoreTestingUtilities" Version="3.4.0" />
+    <PackageReference Include="EDennis.MigrationsExtensions" Version="3.1.6" />
+    <PackageReference Include="MailKit" Version="2.1.4" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\CT.DDS.Configuration\CT.DDS.Configuration\CT.DDS.Configuration.csproj" />
+    <ProjectReference Include="..\..\EMMA.Models\CT.DDS.EMMA.Models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.Development.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="MigrationInserts\dbo.JobConfig.data.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="MigrationInserts\dbo.Message.data.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="MigrationInserts\dbo.SmtpConfig.data.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

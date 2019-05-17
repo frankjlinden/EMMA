@@ -1,0 +1,4 @@
+﻿Message.SenderNotAccepted - abort job, leave message status unsent
+
+Message Status greater than 0 keep sending each execution up to the resend limit 
+
